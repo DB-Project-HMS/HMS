@@ -24,7 +24,8 @@ Name varchar(30),
 Contact varchar(20),
 Gender enum("Male","Female",'M','F'),
 Qualification varchar(20) not Null,
-Appno varchar(10) unique 
+Appno varchar(10) unique,
+LoginId varchar(30) unique
 );
 create Table Patient(
 PID varchar(20) Primary Key,
@@ -55,4 +56,4 @@ Alter Table Patient add Foreign Key (Appno) references Receptionist(Appno);
 Alter Table Pharmacist add Foreign Key (PID) references Patient(PID);
 Alter Table Pharmacist add Foreign Key (DocID) references Doctor(DocID);
 Alter Table Pharmacist add Foreign Key (MedID) references Medicine(MedID);
-
+Alter Table Doctor add Foreign Key (LoginID) references Login(LoginID);
