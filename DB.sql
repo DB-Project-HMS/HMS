@@ -34,11 +34,12 @@ Gender enum("Male","Female",'M','F','Nil'),
 Disease varchar(20) not Null,
 Appno varchar(10) unique
 );
-create Table Receptionist(
+create Table TreatmentRecord(
 PID varchar(20) not Null,
 DocID varchar(20) not Null,
 Appno varchar(10) Primary Key,
 AppDate varchar(20) not Null
+
 );
 create Table Pharmacist(
 PID varchar(20) not Null,
